@@ -1,0 +1,25 @@
+.logo {
+    width: 220px;
+    max-width: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f2e8d5;
+    color: #183d35;
+}
+
+.header {
+    background-color: #183d35;
+    color: #f2e8d5;
+    padding: 20px;
+}
+
+.logo {
+    width: 220px;
+    max-width: 100%;
+}
