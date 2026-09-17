@@ -23,3 +23,17 @@ body {
     width: 220px;
     max-width: 100%;
 }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+main form{
+    display: flex;
+    flex-direction: column;
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
