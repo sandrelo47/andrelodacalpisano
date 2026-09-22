@@ -138,3 +138,31 @@ body {
     display: flex;
     flex-direction: column;
 }
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.campo label {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90px;
+}
+.login-form button {
+    margin-bottom: 15px;
+}
+.login-form a {
+    text-align: center;
+}
+.register-form .campo label {
+    width: 130px;
+}
+.terminos {
+    margin-bottom: 15px;
+}
+.register-form button {
+    margin-bottom: 15px;
+}
+.register-form a {
+    text-align: center;
+}

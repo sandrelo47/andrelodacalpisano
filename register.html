@@ -28,21 +28,30 @@
             </ul>
         </nav>
     </header>
-    <main> 
+
+    <main class="formulario-pagina"> 
          <form class="register-form" action="./login.html" method="get">
-         <label for="email">email</label>
-         <imput type="email" id="email" name="email">
-         <label for="password">contrasena</label>
-         <imput type="password" id="password" name="password">
-            <label for="repeat password"> =Repetir contraseña</label>
-            <imput type="password" id="repeat password name="repeat password>
-            <label> 
-                <imput type="checkbox" name="terminos">
-                    acepto terminos y condiciones
-            </label>
-         <button type="submit">Registrarme</button>
-         <a href="./login.html">ya tengo cuenta </a>
+            <div class="campo">
+         <label for="email"> Email </label>
+         <input type="email" id="email" name="email">
+            </div>
+            <div class="campo"> 
+         <label for="password"> Contraseña </label>
+         <input type="password" id="password" name="password">
+            </div>
+            <div class="campo">
+<label for="password"> Repetir Contraseña </label>
+         <input type="password" id="repeat-password" name="repeat-password">
+            </div>
+         <div class="terminos">
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos"> Acepto terminos y condiciones </label>
+         </div>
+         <button type="submit"> Registrarme </button>
+         <a href="./login.html"> Ya tengo cuenta </a>
+        </form>
     </main>
+
     <footer class="footer">
 
         <p>
