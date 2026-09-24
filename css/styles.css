@@ -166,3 +166,63 @@ body {
 .register-form a {
     text-align: center;
 }
+
+.footer {
+    background-color: #183d35;
+    color: #f2e8d5;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .headertop {
+        flex-direction: column;
+    }
+
+    .buscador {
+        justify-content: center;
+    }
+
+    .distribucion-principal {
+        flex-direction: column;
+    }
+
+    .menucategorias {
+        width: 100%;
+    }
+
+    .menucategorias ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menucategorias li {
+        width: 50%;
+        margin: 0;
+    }
+
+    .contenido-principal {
+        width: 100%;
+    }
+
+    .producto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .menuprincipal ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador {
+        flex-direction: column;
+    }
+
+    .producto {
+        width: 100%;
+    }
+}
