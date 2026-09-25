@@ -19,11 +19,16 @@ body {
     padding: 20px;
 }
 
+.logo {
+    width: 220px;
+    max-width: 100%;
+}
 
 .headertop {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     align-items: center;
 }
 .buscador {
@@ -61,7 +66,7 @@ body {
 }
 .distribucion-principal {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
 }
 
 .menucategorias {
@@ -117,79 +122,6 @@ body {
     text-decoration: none;
 }
 
-.detalle-producto {
-    display: flex;
-    gap: 40px;
-    max-width: 950px;
-    padding: 25px;
-    background-color: white;
-    border: 1px solid #c66a4a;
-}
-
-.imagen-producto,
-.informacion-producto {
-    flex: 1;
-}
-
-.imagen-producto img {
-    width: 100%;
-    max-height: 480px;
-    object-fit: contain;
-}
-
-.categoria-producto {
-    color: #c66a4a;
-    font-weight: bold;
-}
-
-.precio-producto {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.compra-form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-width: 220px;
-}
-
-.compra-form input,
-.compra-form button {
-    padding: 10px;
-}
-
-.compra-form button {
-    background-color: #183d35;
-    color: #f2e8d5;
-    border: 0;
-    cursor: pointer;
-}
-
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #183d35;
-    color: #f2e8d5;
-}
-
-@media (max-width: 700px) {
-    .distribucion-principal,
-    .detalle-producto {
-        flex-direction: column;
-    }
-
-    .menucategorias,
-    .contenido-principal {
-        width: 100%;
-    }
-
-    .producto {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
 .formulario-pagina {
     display: flex;
     justify-content: center;
@@ -205,4 +137,92 @@ body {
 .register-form {
     display: flex;
     flex-direction: column;
+}
+.campo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.campo label {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90px;
+}
+.login-form button {
+    margin-bottom: 15px;
+}
+.login-form a {
+    text-align: center;
+}
+.register-form .campo label {
+    width: 130px;
+}
+.terminos {
+    margin-bottom: 15px;
+}
+.register-form button {
+    margin-bottom: 15px;
+}
+.register-form a {
+    text-align: center;
+}
+
+.footer {
+    background-color: #183d35;
+    color: #f2e8d5;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .headertop {
+        flex-direction: column;
+    }
+
+    .buscador {
+        justify-content: center;
+    }
+
+    .distribucion-principal {
+        flex-direction: column;
+    }
+
+    .menucategorias {
+        width: 100%;
+    }
+
+    .menucategorias ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menucategorias li {
+        width: 50%;
+        margin: 0;
+    }
+
+    .contenido-principal {
+        width: 100%;
+    }
+
+    .producto {
+        width: 45%;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .menuprincipal ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buscador {
+        flex-direction: column;
+    }
+
+    .producto {
+        width: 100%;
+    }
 }
