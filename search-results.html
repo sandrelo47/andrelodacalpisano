@@ -2,20 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados de búsqueda | Rugby Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rugby Store | Resultados de búsqueda</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="headertop">
-            <a href="./index.html"><img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store"></a>
-            <form class="buscador" action="./search-results.html" method="get">
+            <a href="./index.html">
+                <img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store">
+            </a>
+
+            <form class="buscador" action="./search-results.html" method="GET">
                 <label for="busqueda">Buscar productos:</label>
-                <input id="busqueda" type="search" name="busqueda">
+                <input id="busqueda" type="text" name="busqueda" value="">
                 <button type="submit">Buscar</button>
             </form>
         </div>
+
         <nav class="menuprincipal">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -25,38 +29,93 @@
         </nav>
     </header>
 
-    <main class="contenido-principal">
-        <p><a href="./index.html">Inicio</a> / Búsqueda</p>
-        <h1>Resultados de búsqueda</h1>
-        <p class="resultado-busqueda">Estos son los productos disponibles:</p>
-        <div class="lista-productos">
-            <article class="producto">
-                <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
-                <h2>Pelota de rugby Gilbert</h2>
-                <p>Pelota resistente y de excelente calidad.</p>
-                <p><strong>$45.000</strong></p>
-                <a href="./product.html">Ver detalle</a>
-            </article>
-            <article class="producto">
-                <img src="./img/casco-rugby.jpeg" alt="Casco de rugby Canterbury">
-                <h2>Casco de rugby Canterbury</h2>
-                <p>Protección acolchada y liviana.</p>
-                <p><strong>$52.000</strong></p>
-                <a href="./product.html#casco">Ver detalle</a>
-            </article>
-            <article class="producto">
-                <img src="./img/botines-rugby.jpeg" alt="Botines Adidas Kakari">
-                <h2>Botines Adidas Kakari</h2>
-                <p>Botines ideales para forwards.</p>
-                <p><strong>$370.000</strong></p>
-                <a href="./product.html#botines">Ver detalle</a>
-            </article>
-        </div>
-    </main>
+    <div class="distribucion-principal">
+        <nav class="menucategorias">
+            <h2>Categorías</h2>
+
+            <ul>
+                <li><a href="./category.html">Beauty</a></li>
+                <li><a href="./category.html">Fragrances</a></li>
+                <li><a href="./category.html">Furniture</a></li>
+                <li><a href="./category.html">Groceries</a></li>
+                <li><a href="./category.html">Home decoration</a></li>
+                <li><a href="./category.html">Kitchen accessories</a></li>
+                <li><a href="./category.html">Laptops</a></li>
+                <li><a href="./category.html">Mens shirts</a></li>
+                <li><a href="./category.html">Mens shoes</a></li>
+                <li><a href="./category.html">Mens watches</a></li>
+                <li><a href="./category.html">Mobile accessories</a></li>
+                <li><a href="./category.html">Motorcycle</a></li>
+                <li><a href="./category.html">Skin care</a></li>
+                <li><a href="./category.html">Smartphones</a></li>
+                <li><a href="./category.html">Sports accessories</a></li>
+                <li><a href="./category.html">Sunglasses</a></li>
+                <li><a href="./category.html">Tablets</a></li>
+                <li><a href="./category.html">Tops</a></li>
+                <li><a href="./category.html">Vehicle</a></li>
+                <li><a href="./category.html">Womens bags</a></li>
+                <li><a href="./category.html">Womens dresses</a></li>
+                <li><a href="./category.html">Womens jewellery</a></li>
+                <li><a href="./category.html">Womens shoes</a></li>
+                <li><a href="./category.html">Womens watches</a></li>
+            </ul>
+        </nav>
+
+        <main class="contenido-principal">
+            <p class="ruta">
+                <a href="./index.html">Inicio</a> / Búsqueda
+            </p>
+
+            <h1>Resultados de búsqueda</h1>
+
+            <p class="termino-buscado">
+                Buscaste: <strong>"pelota"</strong> - 3 productos encontrados
+            </p>
+
+            <section class="seccion-productos">
+                <h2>Productos que coinciden con tu búsqueda</h2>
+
+                <div class="lista-productos">
+                    <article class="producto">
+                        <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
+                        <h3>Pelota de rugby Gilbert</h3>
+                        <p>Pelota de rugby Gilbert resistente y de excelente calidad.</p>
+                        <p><strong>Precio: $45.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+
+                    <article class="producto">
+                        <img src="./img/pelotamundial.png" alt="Pelota del Mundial de Rugby 2027">
+                        <h3>Pelota Mundial de Rugby 2027</h3>
+                        <p>Pelota Gilbert con el diseño oficial de Australia 2027.</p>
+                        <p><strong>Precio: $95.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+
+                    <article class="producto">
+                        <img src="./img/pelotarebound.png" alt="Pelota de entrenamiento Gilbert Rebounder">
+                        <h3>Pelota Gilbert Rebounder</h3>
+                        <p>Pelota con extremo plano para practicar pases contra una pared.</p>
+                        <p><strong>Precio: $75.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="sin-resultados">
+                <h2>No encontraste lo que buscabas</h2>
+                <p>
+                    No hay productos que coincidan con el término buscado. Probá con otra palabra o recorré las categorías del menú.
+                </p>
+                <a href="./index.html">Volver al inicio</a>
+            </section>
+        </main>
+    </div>
 
     <footer class="footer">
-        <p>Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.</p>
+        <p>
+            Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.
+        </p>
     </footer>
-
 </body>
 </html>

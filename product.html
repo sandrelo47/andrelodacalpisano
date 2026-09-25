@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelota de rugby Gilbert | Rugby Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rugby Store | Pelota de rugby Gilbert</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -12,12 +12,14 @@
             <a href="./index.html">
                 <img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store">
             </a>
-            <form class="buscador" action="./search-results.html" method="get">
+
+            <form class="buscador" action="./search-results.html" method="GET">
                 <label for="busqueda">Buscar productos:</label>
-                <input id="busqueda" type="search" name="busqueda">
+                <input id="busqueda" type="text" name="busqueda" value="">
                 <button type="submit">Buscar</button>
             </form>
         </div>
+
         <nav class="menuprincipal">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -27,63 +29,110 @@
         </nav>
     </header>
 
-    <main class="contenido-principal pagina-producto">
-        <p><a href="./index.html">Inicio</a> / Producto</p>
-        <article class="detalle-producto">
-            <div class="imagen-producto">
-                <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
-            </div>
-            <div class="informacion-producto">
-                <p class="categoria-producto">Pelotas</p>
-                <h1>Pelota de rugby Gilbert</h1>
-                <p class="precio-producto">$45.000</p>
-                <p>Pelota de rugby Gilbert resistente y de excelente calidad, ideal para entrenamientos y partidos.</p>
-                <ul>
-                    <li>Material resistente para uso intensivo.</li>
-                    <li>Agarre confiable en distintas condiciones.</li>
-                    <li>Tamaño oficial para rugby.</li>
-                </ul>
-                <form class="compra-form" action="./index.html" method="get">
-                    <label for="cantidad">Cantidad</label>
-                    <input id="cantidad" name="cantidad" type="number" min="1" value="1">
-                    <button type="submit">Agregar al carrito</button>
-                </form>
-            </div>
-        </article>
+    <div class="distribucion-principal">
+        <nav class="menucategorias">
+            <h2>Categorías</h2>
 
-        <article class="detalle-producto" id="camiseta">
-            <div class="imagen-producto"><img src="./img/camiseta-rugbyy.png" alt="Camiseta de rugby"></div>
-            <div class="informacion-producto"><p class="categoria-producto">Indumentaria</p><h2>Camiseta de rugby</h2><p class="precio-producto">$150.000</p><p>Camiseta oficial de la selección argentina de rugby.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-camiseta">Cantidad</label><input id="cantidad-camiseta" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
-        </article>
+            <ul>
+                <li><a href="./category.html">Beauty</a></li>
+                <li><a href="./category.html">Fragrances</a></li>
+                <li><a href="./category.html">Furniture</a></li>
+                <li><a href="./category.html">Groceries</a></li>
+                <li><a href="./category.html">Home decoration</a></li>
+                <li><a href="./category.html">Kitchen accessories</a></li>
+                <li><a href="./category.html">Laptops</a></li>
+                <li><a href="./category.html">Mens shirts</a></li>
+                <li><a href="./category.html">Mens shoes</a></li>
+                <li><a href="./category.html">Mens watches</a></li>
+                <li><a href="./category.html">Mobile accessories</a></li>
+                <li><a href="./category.html">Motorcycle</a></li>
+                <li><a href="./category.html">Skin care</a></li>
+                <li><a href="./category.html">Smartphones</a></li>
+                <li><a href="./category.html">Sports accessories</a></li>
+                <li><a href="./category.html">Sunglasses</a></li>
+                <li><a href="./category.html">Tablets</a></li>
+                <li><a href="./category.html">Tops</a></li>
+                <li><a href="./category.html">Vehicle</a></li>
+                <li><a href="./category.html">Womens bags</a></li>
+                <li><a href="./category.html">Womens dresses</a></li>
+                <li><a href="./category.html">Womens jewellery</a></li>
+                <li><a href="./category.html">Womens shoes</a></li>
+                <li><a href="./category.html">Womens watches</a></li>
+            </ul>
+        </nav>
 
-        <article class="detalle-producto" id="botines">
-            <div class="imagen-producto"><img src="./img/botines-rugby.jpeg" alt="Botines Adidas Kakari"></div>
-            <div class="informacion-producto"><p class="categoria-producto">Botines</p><h2>Botines Adidas Kakari</h2><p class="precio-producto">$370.000</p><p>Botines Adidas de elite, ideales para forwards.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-botines">Cantidad</label><input id="cantidad-botines" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
-        </article>
+        <main class="contenido-principal">
+            <p class="ruta">
+                <a href="./index.html">Inicio</a> / <a href="./category.html">Sports accessories</a> / Pelota de rugby Gilbert
+            </p>
 
-        <article class="detalle-producto" id="casco">
-            <div class="imagen-producto"><img src="./img/casco-rugby.jpeg" alt="Casco de rugby Canterbury"></div>
-            <div class="informacion-producto"><p class="categoria-producto">Protecciones</p><h2>Casco de rugby Canterbury</h2><p class="precio-producto">$52.000</p><p>Protección acolchada y liviana para entrenamientos y partidos.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-casco">Cantidad</label><input id="cantidad-casco" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
-        </article>
+            <article class="detalle-producto">
+                <div class="detalle-imagen">
+                    <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
+                </div>
 
-        <article class="detalle-producto" id="protector">
-            <div class="imagen-producto"><img src="./img/protectorbucal.png" alt="Protector bucal Gilbert"></div>
-            <div class="informacion-producto"><p class="categoria-producto">Protecciones</p><h2>Protector bucal Gilbert</h2><p class="precio-producto">$18.000</p><p>Protector bucal cómodo para reducir golpes durante el juego.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-protector">Cantidad</label><input id="cantidad-protector" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
-        </article>
+                <div class="detalle-datos">
+                    <p class="detalle-marca">Gilbert</p>
+                    <h1>Pelota de rugby Gilbert</h1>
+                    <p class="detalle-precio">$45.000</p>
 
-        <article class="detalle-producto" id="short">
-            <div class="imagen-producto"><img src="./img/short-rugby.png" alt="Short de rugby de los All Blacks"></div>
-            <div class="informacion-producto"><p class="categoria-producto">Indumentaria</p><h2>Short de rugby de los All Blacks</h2><p class="precio-producto">$90.000</p><p>Short resistente y cómodo para entrenamientos y partidos.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-short">Cantidad</label><input id="cantidad-short" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
-        </article>
+                    <p>
+                        Pelota de rugby Gilbert resistente y de excelente calidad, ideal para entrenamientos y partidos.
+                        Tiene un agarre confiable en distintas condiciones y es de tamaño oficial.
+                    </p>
 
-        <article class="detalle-producto" id="tee">
-            <div class="imagen-producto"><img src="./img/tee-rugby.png" alt="Tee verde para rugby"></div>
-            <div class="informacion-producto"><p class="categoria-producto">Entrenamiento</p><h2>Tee verde</h2><p class="precio-producto">$25.000</p><p>Tee profesional para practicar patadas a los palos.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-tee">Cantidad</label><input id="cantidad-tee" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
-        </article>
-    </main>
+                    <dl class="ficha-producto">
+                        <dt>Marca</dt>
+                        <dd>Gilbert</dd>
+
+                        <dt>Categoría</dt>
+                        <dd><a href="./category.html">Sports accessories</a></dd>
+
+                        <dt>Stock</dt>
+                        <dd>24 unidades disponibles</dd>
+                    </dl>
+
+                    <ul class="tags">
+                        <li>pelota</li>
+                        <li>gilbert</li>
+                        <li>entrenamiento</li>
+                    </ul>
+                </div>
+            </article>
+
+            <section class="reviews">
+                <h2>Opiniones de los usuarios</h2>
+
+                <div class="lista-reviews">
+                    <article class="review">
+                        <p class="review-rating">5/5</p>
+                        <p>Excelente pelota, se siente igual a las que usamos en el club. La compré para entrenar en casa y no pierde aire.</p>
+                        <p class="review-fecha">12/08/2026</p>
+                        <p class="review-usuario">Tomás Ferreyra</p>
+                    </article>
+
+                    <article class="review">
+                        <p class="review-rating">4/5</p>
+                        <p>Muy buen agarre incluso con lluvia. Le saco una estrella porque tardó unos días más de lo esperado en llegar.</p>
+                        <p class="review-fecha">03/09/2026</p>
+                        <p class="review-usuario">Lucía Benítez</p>
+                    </article>
+
+                    <article class="review">
+                        <p class="review-rating">5/5</p>
+                        <p>Se la regalé a mi hijo que arrancó en infantiles y le encantó. Relación precio y calidad muy buena.</p>
+                        <p class="review-fecha">18/09/2026</p>
+                        <p class="review-usuario">Martín Sosa</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <footer class="footer">
-        <p>Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.</p>
+        <p>
+            Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.
+        </p>
     </footer>
 </body>
 </html>

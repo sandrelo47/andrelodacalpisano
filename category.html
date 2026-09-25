@@ -2,20 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indumentaria | Rugby Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rugby Store | Sports accessories</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="headertop">
-            <a href="./index.html"><img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store"></a>
-            <form class="buscador" action="./search-results.html" method="get">
+            <a href="./index.html">
+                <img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store">
+            </a>
+
+            <form class="buscador" action="./search-results.html" method="GET">
                 <label for="busqueda">Buscar productos:</label>
-                <input id="busqueda" type="search" name="busqueda">
+                <input id="busqueda" type="text" name="busqueda" value="">
                 <button type="submit">Buscar</button>
             </form>
         </div>
+
         <nav class="menuprincipal">
             <ul>
                 <li><a href="./index.html">Home</a></li>
@@ -28,104 +32,121 @@
     <div class="distribucion-principal">
         <nav class="menucategorias">
             <h2>Categorías</h2>
+
             <ul>
-                <li><a href="#indumentaria">Indumentaria</a></li>
-                <li><a href="#botines">Botines</a></li>
-                <li><a href="#pelotas">Pelotas</a></li>
-                <li><a href="#protecciones">Protecciones</a></li>
-                <li><a href="#entrenamiento">Entrenamiento</a></li>
-                <li><a href="#accesorios">Accesorios</a></li>
+                <li><a href="./category.html">Beauty</a></li>
+                <li><a href="./category.html">Fragrances</a></li>
+                <li><a href="./category.html">Furniture</a></li>
+                <li><a href="./category.html">Groceries</a></li>
+                <li><a href="./category.html">Home decoration</a></li>
+                <li><a href="./category.html">Kitchen accessories</a></li>
+                <li><a href="./category.html">Laptops</a></li>
+                <li><a href="./category.html">Mens shirts</a></li>
+                <li><a href="./category.html">Mens shoes</a></li>
+                <li><a href="./category.html">Mens watches</a></li>
+                <li><a href="./category.html">Mobile accessories</a></li>
+                <li><a href="./category.html">Motorcycle</a></li>
+                <li><a href="./category.html">Skin care</a></li>
+                <li><a href="./category.html">Smartphones</a></li>
+                <li><a href="./category.html">Sports accessories</a></li>
+                <li><a href="./category.html">Sunglasses</a></li>
+                <li><a href="./category.html">Tablets</a></li>
+                <li><a href="./category.html">Tops</a></li>
+                <li><a href="./category.html">Vehicle</a></li>
+                <li><a href="./category.html">Womens bags</a></li>
+                <li><a href="./category.html">Womens dresses</a></li>
+                <li><a href="./category.html">Womens jewellery</a></li>
+                <li><a href="./category.html">Womens shoes</a></li>
+                <li><a href="./category.html">Womens watches</a></li>
             </ul>
         </nav>
+
         <main class="contenido-principal">
-            <p><a href="./index.html">Inicio</a> / Categoría</p>
-            <h1 id="indumentaria">Indumentaria</h1>
-            <p>Ropa cómoda y resistente para entrenar y jugar al rugby.</p>
-            <div class="lista-productos">
-                <article class="producto">
-                    <img src="./img/camiseta-rugbyy.png" alt="Camiseta de rugby">
-                    <h2>Camiseta de rugby</h2>
-                    <p>Camiseta oficial de la selección argentina de rugby.</p>
-                    <p><strong>$150.000</strong></p>
-                    <a href="./product.html#camiseta">Ver detalle</a>
-                </article>
-                <article class="producto">
-                    <img src="./img/short-rugby.png" alt="Short de rugby de los All Blacks">
-                    <h2>Short de rugby de los All Blacks</h2>
-                    <p>Short resistente y cómodo para entrenamientos y partidos.</p>
-                    <p><strong>$90.000</strong></p>
-                    <a href="./product.html#short">Ver detalle</a>
-                </article>
+            <p class="ruta">
+                <a href="./index.html">Inicio</a> / Sports accessories
+            </p>
+
+            <div class="encabezado-categoria">
+                <h1>Sports accessories</h1>
+                <p>
+                    Pelotas, protecciones y accesorios para entrenar y jugar al rugby. Todos los productos de esta categoría.
+                </p>
             </div>
 
-            <section class="seccion-categoria" id="botines">
-                <h2>Botines</h2>
-                <div class="lista-productos">
-                    <article class="producto">
-                        <img src="./img/botines-rugby.jpeg" alt="Botines Adidas Kakari">
-                        <h3>Botines Adidas Kakari</h3>
-                        <p>Botines Adidas de elite, ideales para forwards.</p>
-                        <p><strong>$370.000</strong></p>
-                        <a href="./product.html#botines">Ver detalle</a>
-                    </article>
-                </div>
-            </section>
+            <section class="seccion-productos">
+                <h2>9 productos en Sports accessories</h2>
 
-            <section class="seccion-categoria" id="pelotas">
-                <h2>Pelotas</h2>
                 <div class="lista-productos">
                     <article class="producto">
                         <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
                         <h3>Pelota de rugby Gilbert</h3>
-                        <p>Pelota resistente y de excelente calidad.</p>
-                        <p><strong>$45.000</strong></p>
+                        <p>Pelota de rugby Gilbert resistente y de excelente calidad.</p>
+                        <p><strong>Precio: $45.000</strong></p>
                         <a href="./product.html">Ver detalle</a>
                     </article>
-                </div>
-            </section>
 
-            <section class="seccion-categoria" id="protecciones">
-                <h2>Protecciones</h2>
-                <div class="lista-productos">
                     <article class="producto">
-                        <img src="./img/casco-rugby.jpeg" alt="Casco de rugby Canterbury">
-                        <h3>Casco de rugby Canterbury</h3>
-                        <p>Protección acolchada y liviana.</p>
-                        <p><strong>$52.000</strong></p>
-                        <a href="./product.html#casco">Ver detalle</a>
+                        <img src="./img/pelotamundial.png" alt="Pelota del Mundial de Rugby 2027">
+                        <h3>Pelota Mundial de Rugby 2027</h3>
+                        <p>Pelota Gilbert con el diseño oficial de Australia 2027.</p>
+                        <p><strong>Precio: $95.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
                     </article>
+
                     <article class="producto">
-                        <img src="./img/protectorbucal.png" alt="Protector bucal Gilbert">
+                        <img src="./img/pelotarebound.png" alt="Pelota de entrenamiento Gilbert Rebounder">
+                        <h3>Pelota Gilbert Rebounder</h3>
+                        <p>Pelota con extremo plano para practicar pases contra una pared.</p>
+                        <p><strong>Precio: $75.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+
+                    <article class="producto">
+                        <img src="./img/escudo.png" alt="Escudo de tackle Gilbert">
+                        <h3>Escudo de tackle Gilbert</h3>
+                        <p>Escudo acolchado para practicar tackles de manera segura.</p>
+                        <p><strong>Precio: $180.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+
+                    <article class="producto">
+                        <img src="./img/tee-rugby.png" alt="Tee para rugby">
+                        <h3>Tee verde</h3>
+                        <p>Tee profesional para practicar patadas a los palos.</p>
+                        <p><strong>Precio: $25.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+
+                    <article class="producto">
+                        <img src="./img/protectorbucal.png" alt="Protector bucal de rugby">
                         <h3>Protector bucal Gilbert</h3>
-                        <p>Protector bucal cómodo para el juego.</p>
-                        <p><strong>$18.000</strong></p>
-                        <a href="./product.html#protector">Ver detalle</a>
+                        <p>Protector bucal cómodo para reducir golpes durante el juego.</p>
+                        <p><strong>Precio: $18.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
                     </article>
-                </div>
-            </section>
 
-            <section class="seccion-categoria" id="entrenamiento">
-                <h2>Entrenamiento</h2>
-                <div class="lista-productos">
                     <article class="producto">
-                        <img src="./img/tee-rugby.png" alt="Tee verde para rugby">
-                        <h3>Tee verde</h3>
-                        <p>Tee profesional para practicar patadas.</p>
-                        <p><strong>$25.000</strong></p>
-                        <a href="./product.html#tee">Ver detalle</a>
+                        <img src="./img/casco-rugby.jpeg" alt="Casco de rugby">
+                        <h3>Casco de rugby Canterbury</h3>
+                        <p>Protección acolchada y liviana para entrenamientos y partidos.</p>
+                        <p><strong>Precio: $52.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
                     </article>
-                </div>
-            </section>
 
-            <section class="seccion-categoria" id="accesorios">
-                <h2>Accesorios</h2>
-                <div class="lista-productos">
                     <article class="producto">
-                        <img src="./img/tee-rugby.png" alt="Tee verde para rugby">
-                        <h3>Tee verde</h3>
-                        <p>Accesorio práctico para entrenamientos.</p>
-                        <p><strong>$25.000</strong></p>
-                        <a href="./product.html#tee">Ver detalle</a>
+                        <img src="./img/hombreras-rugby.png" alt="Hombreras de rugby">
+                        <h3>Hombreras de rugby</h3>
+                        <p>Protección liviana y acolchada para hombros y costillas.</p>
+                        <p><strong>Precio: $75.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
+                    </article>
+
+                    <article class="producto">
+                        <img src="./img/bolso-rugby.png" alt="Bolso deportivo de rugby">
+                        <h3>Bolso deportivo de rugby</h3>
+                        <p>Bolso amplio y resistente para transportar la indumentaria.</p>
+                        <p><strong>Precio: $120.000</strong></p>
+                        <a href="./product.html">Ver detalle</a>
                     </article>
                 </div>
             </section>
@@ -133,7 +154,9 @@
     </div>
 
     <footer class="footer">
-        <p>Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.</p>
+        <p>
+            Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.
+        </p>
     </footer>
 </body>
 </html>
