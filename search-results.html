@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de búsqueda | Rugby Store</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="headertop">
+            <a href="./index.html"><img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store"></a>
+            <form class="buscador" action="./search-results.html" method="get">
+                <label for="busqueda">Buscar productos:</label>
+                <input id="busqueda" type="search" name="busqueda">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav class="menuprincipal">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./register.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido-principal">
+        <p><a href="./index.html">Inicio</a> / Búsqueda</p>
+        <h1>Resultados de búsqueda</h1>
+        <p class="resultado-busqueda">Estos son los productos disponibles:</p>
+        <div class="lista-productos">
+            <article class="producto">
+                <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
+                <h2>Pelota de rugby Gilbert</h2>
+                <p>Pelota resistente y de excelente calidad.</p>
+                <p><strong>$45.000</strong></p>
+                <a href="./product.html">Ver detalle</a>
+            </article>
+            <article class="producto">
+                <img src="./img/casco-rugby.jpeg" alt="Casco de rugby Canterbury">
+                <h2>Casco de rugby Canterbury</h2>
+                <p>Protección acolchada y liviana.</p>
+                <p><strong>$52.000</strong></p>
+                <a href="./product.html#casco">Ver detalle</a>
+            </article>
+            <article class="producto">
+                <img src="./img/botines-rugby.jpeg" alt="Botines Adidas Kakari">
+                <h2>Botines Adidas Kakari</h2>
+                <p>Botines ideales para forwards.</p>
+                <p><strong>$370.000</strong></p>
+                <a href="./product.html#botines">Ver detalle</a>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.</p>
+    </footer>
+
+</body>
+</html>

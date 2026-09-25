@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelota de rugby Gilbert | Rugby Store</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="headertop">
+            <a href="./index.html">
+                <img class="logo" src="./img/logorugbystore.png" alt="Logo de Rugby Store">
+            </a>
+            <form class="buscador" action="./search-results.html" method="get">
+                <label for="busqueda">Buscar productos:</label>
+                <input id="busqueda" type="search" name="busqueda">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav class="menuprincipal">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./register.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenido-principal pagina-producto">
+        <p><a href="./index.html">Inicio</a> / Producto</p>
+        <article class="detalle-producto">
+            <div class="imagen-producto">
+                <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
+            </div>
+            <div class="informacion-producto">
+                <p class="categoria-producto">Pelotas</p>
+                <h1>Pelota de rugby Gilbert</h1>
+                <p class="precio-producto">$45.000</p>
+                <p>Pelota de rugby Gilbert resistente y de excelente calidad, ideal para entrenamientos y partidos.</p>
+                <ul>
+                    <li>Material resistente para uso intensivo.</li>
+                    <li>Agarre confiable en distintas condiciones.</li>
+                    <li>Tamaño oficial para rugby.</li>
+                </ul>
+                <form class="compra-form" action="./index.html" method="get">
+                    <label for="cantidad">Cantidad</label>
+                    <input id="cantidad" name="cantidad" type="number" min="1" value="1">
+                    <button type="submit">Agregar al carrito</button>
+                </form>
+            </div>
+        </article>
+
+        <article class="detalle-producto" id="camiseta">
+            <div class="imagen-producto"><img src="./img/camiseta-rugbyy.png" alt="Camiseta de rugby"></div>
+            <div class="informacion-producto"><p class="categoria-producto">Indumentaria</p><h2>Camiseta de rugby</h2><p class="precio-producto">$150.000</p><p>Camiseta oficial de la selección argentina de rugby.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-camiseta">Cantidad</label><input id="cantidad-camiseta" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
+        </article>
+
+        <article class="detalle-producto" id="botines">
+            <div class="imagen-producto"><img src="./img/botines-rugby.jpeg" alt="Botines Adidas Kakari"></div>
+            <div class="informacion-producto"><p class="categoria-producto">Botines</p><h2>Botines Adidas Kakari</h2><p class="precio-producto">$370.000</p><p>Botines Adidas de elite, ideales para forwards.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-botines">Cantidad</label><input id="cantidad-botines" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
+        </article>
+
+        <article class="detalle-producto" id="casco">
+            <div class="imagen-producto"><img src="./img/casco-rugby.jpeg" alt="Casco de rugby Canterbury"></div>
+            <div class="informacion-producto"><p class="categoria-producto">Protecciones</p><h2>Casco de rugby Canterbury</h2><p class="precio-producto">$52.000</p><p>Protección acolchada y liviana para entrenamientos y partidos.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-casco">Cantidad</label><input id="cantidad-casco" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
+        </article>
+
+        <article class="detalle-producto" id="protector">
+            <div class="imagen-producto"><img src="./img/protectorbucal.png" alt="Protector bucal Gilbert"></div>
+            <div class="informacion-producto"><p class="categoria-producto">Protecciones</p><h2>Protector bucal Gilbert</h2><p class="precio-producto">$18.000</p><p>Protector bucal cómodo para reducir golpes durante el juego.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-protector">Cantidad</label><input id="cantidad-protector" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
+        </article>
+
+        <article class="detalle-producto" id="short">
+            <div class="imagen-producto"><img src="./img/short-rugby.png" alt="Short de rugby de los All Blacks"></div>
+            <div class="informacion-producto"><p class="categoria-producto">Indumentaria</p><h2>Short de rugby de los All Blacks</h2><p class="precio-producto">$90.000</p><p>Short resistente y cómodo para entrenamientos y partidos.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-short">Cantidad</label><input id="cantidad-short" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
+        </article>
+
+        <article class="detalle-producto" id="tee">
+            <div class="imagen-producto"><img src="./img/tee-rugby.png" alt="Tee verde para rugby"></div>
+            <div class="informacion-producto"><p class="categoria-producto">Entrenamiento</p><h2>Tee verde</h2><p class="precio-producto">$25.000</p><p>Tee profesional para practicar patadas a los palos.</p><form class="compra-form" action="./index.html" method="get"><label for="cantidad-tee">Cantidad</label><input id="cantidad-tee" name="cantidad" type="number" min="1" value="1"><button type="submit">Agregar al carrito</button></form></div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.</p>
+    </footer>
+</body>
+</html>
