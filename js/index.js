@@ -18,10 +18,12 @@ fetch("https://dummyjson.com/products/categories")
         return response.json();
     })
     .then(function(data) {
+        if (listaCategorias != null) {
     listaCategorias.innerHTML = "";
 
     for (let i = 0; i < data.length; i++) {
-        console.log(data[i].name);
+        listaCategorias.innerHTML += '<li><a href="./category.html?categoria=' + data[i].slug + '">' + data[i].name + '</a></li>';
+    }
     }
 })
 
