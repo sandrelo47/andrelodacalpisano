@@ -30,3 +30,36 @@ fetch("https://dummyjson.com/products/categories")
     .catch(function(error) {
         console.log("El error es: " + error);
     });
+    let productosUno = document.querySelector("#productos-uno");
+let productosDos = document.querySelector("#productos-dos");
+fetch("https://dummyjson.com/products/category/groceries")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        if (productosUno != null) {
+        productosUno.innerHTML = "";
+        for (let i = 0; i < 10; i++) {
+productosUno.innerHTML += "<article class='producto'><img src='" + data.products[i].thumbnail + "' alt='" + data.products[i].title + "'><h3>" + data.products[i].title + "</h3><p>" + data.products[i].description + "</p><p><strong>Precio: USD $" + data.products[i].price + "</strong></p><a href='./product.html?id=" + data.products[i].id + "'>Ver detalle</a></article>";
+            }
+            }
+})
+    .catch(function(error) {
+        console.log("El error es: " + error);
+    });
+    fetch("https://dummyjson.com/products/category/smartphones")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+    if (productosDos != null) {
+        productosDos.innerHTML = "";
+
+        for (let i = 0; i < 10; i++) {
+            productosDos.innerHTML += "<article class='producto'><img src='" + data.products[i].thumbnail + "' alt='" + data.products[i].title + "'><h3>" + data.products[i].title + "</h3><p>" + data.products[i].description + "</p><p><strong>Precio: USD $" + data.products[i].price + "</strong></p><a href='./product.html?id=" + data.products[i].id + "'>Ver detalle</a></article>";
+        }
+    }
+})
+    .catch(function(error) {
+        console.log("El error es: " + error);
+    });
