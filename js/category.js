@@ -5,9 +5,8 @@ let estadoCategoria = document.querySelector("#estado-categoria");
 let listaProductos = document.querySelector("#productos-categoria");
 
 if (categoria == null || categoria == "") {
-    estadoCategoria.textContent = "No se seleccionó una categoría.";
-} else {
-    fetch("https://dummyjson.com/products/category/" + encodeURIComponent(categoria))
+    estadoCategoria.innerText = "No se seleccionó una categoría.";
+    fetch("https://dummyjson.com/products/category/" + categoria)
         .then(function (respuesta) {
             if (!respuesta.ok) {
                 throw new Error("No se pudieron cargar los productos.");
@@ -16,24 +15,21 @@ if (categoria == null || categoria == "") {
             return respuesta.json();
         })
         .then(function (datos) {
-            let nombreCategoria = categoria.replace(/-/g, " ");
-            nombreCategoria =
-                nombreCategoria.charAt(0).toUpperCase() +
-                nombreCategoria.slice(1);
+           let nombreCategoria = categoria;
 
-            document.querySelector("#titulo-categoria").textContent =
+            document.querySelector("#titulo-categoria").innerText =
                 nombreCategoria;
 
-            document.querySelector("#ruta-categoria").textContent =
+            document.querySelector("#ruta-categoria").innerText =
                 nombreCategoria;
 
-            document.querySelector("#cantidad-productos").textContent =
+            document.querySelector("#cantidad-productos").innerText =
                 datos.products.length + " productos en " + nombreCategoria;
 
-            estadoCategoria.textContent = "";
+            estadoCategoria.innerText = "";
 
             if (datos.products.length == 0) {
-                estadoCategoria.textContent =
+                estadoCategoria.innerText =
                     "No hay productos en esta categoría.";
             }
 
@@ -48,20 +44,20 @@ if (categoria == null || categoria == "") {
                 imagen.alt = producto.title;
 
                 let titulo = document.createElement("h3");
-                titulo.textContent = producto.title;
+                titulo.innerText = producto.title;
 
                 let descripcion = document.createElement("p");
-                descripcion.textContent = producto.description;
+                descripcion.innerText = producto.description;
 
                 let precio = document.createElement("p");
                 let precioTexto = document.createElement("strong");
-                precioTexto.textContent = "Precio: USD $" + producto.price;
+                precioTexto.innerText = "Precio: USD $" + producto.price;
                 precio.appendChild(precioTexto);
 
                 let enlaceDetalle = document.createElement("a");
                 enlaceDetalle.href =
-                    "./product.html?id=" + encodeURIComponent(producto.id);
-                enlaceDetalle.textContent = "Ver detalle";
+                "./product.html?id=" + producto.id;
+                enlaceDetalle.innerText = "Ver detalle";
 
                 tarjeta.appendChild(imagen);
                 tarjeta.appendChild(titulo);
@@ -73,7 +69,7 @@ if (categoria == null || categoria == "") {
             }
         })
         .catch(function (error) {
-            estadoCategoria.textContent =
+            estadoCategoria.innerText =
                 "No se pudieron cargar los productos. Intentá nuevamente.";
             console.log("El error es: " + error);
         });

@@ -6,49 +6,45 @@ let detalleProducto = document.querySelector("#detalle-producto");
 let seccionReviews = document.querySelector("#seccion-reviews");
 
 if (idProducto == null || idProducto == "") {
-    estadoProducto.textContent = "No se indicó el producto que querés ver.";
+    estadoProducto.innerText = "No se indicó el producto que querés ver.";
 } else {
     fetch("https://dummyjson.com/products/" + idProducto)
         .then(function (respuesta) {
-            if (!respuesta.ok) {
-                throw new Error("No se encontró el producto.");
-            }
-
-            return respuesta.json();
-        })
+    return respuesta.json();
+})
         .then(function (producto) {
-            estadoProducto.textContent = "";
+            estadoProducto.innerText = "";
 
             detalleProducto.style.display = "flex";
             seccionReviews.style.display = "block";
 
             document.querySelector("#imagen-producto").src = producto.thumbnail;
             document.querySelector("#imagen-producto").alt = producto.title;
-            document.querySelector("#marca-producto").textContent =
+            document.querySelector("#marca-producto").innerText =
                 producto.brand || "Marca no informada";
-            document.querySelector("#titulo-producto").textContent =
+            document.querySelector("#titulo-producto").innerText =
                 producto.title;
-            document.querySelector("#ruta-producto").textContent =
+            document.querySelector("#ruta-producto").innerText =
                 producto.title;
-            document.querySelector("#precio-producto").textContent =
+            document.querySelector("#precio-producto").innerText =
                 "USD $" + producto.price;
-            document.querySelector("#descripcion-producto").textContent =
+            document.querySelector("#descripcion-producto").innerText =
                 producto.description;
-            document.querySelector("#ficha-marca").textContent =
+            document.querySelector("#ficha-marca").innerText =
                 producto.brand || "Marca no informada";
-            document.querySelector("#stock-producto").textContent =
+            document.querySelector("#stock-producto").innerText =
                 producto.stock + " unidades";
 
-            let nombreCategoria = producto.category.replace(/-/g, " ");
-            let urlCategoria =
-                "./category.html?categoria=" +
-                encodeURIComponent(producto.category);
+            let nombreCategoria = producto.category;
 
-            document.querySelector("#categoria-producto").textContent =
+let urlCategoria =
+    "./category.html?categoria=" + producto.category;
+
+            document.querySelector("#categoria-producto").innerText =
                 nombreCategoria;
             document.querySelector("#categoria-producto").href = urlCategoria;
 
-            document.querySelector("#enlace-categoria").textContent =
+            document.querySelector("#enlace-categoria").innerText =
                 nombreCategoria;
             document.querySelector("#enlace-categoria").href = urlCategoria;
 
@@ -56,17 +52,13 @@ if (idProducto == null || idProducto == "") {
 
             for (let i = 0; i < producto.tags.length && i < 3; i++) {
                 let tag = document.createElement("li");
-                tag.textContent = producto.tags[i];
+                tag.innerText = producto.tags[i];
                 listaTags.appendChild(tag);
             }
 
             mostrarReviews(producto.reviews);
         })
-        .catch(function (error) {
-            estadoProducto.textContent =
-                "No se pudo cargar el producto. Intentá nuevamente.";
-            console.log("El error es: " + error);
-        });
+    
 }
 
 function mostrarReviews(reviews) {
@@ -74,35 +66,18 @@ function mostrarReviews(reviews) {
     let estadoReviews = document.querySelector("#estado-reviews");
 
     if (reviews.length == 0) {
-        estadoReviews.textContent =
+        estadoReviews.innerText =
             "Este producto todavía no tiene opiniones.";
     }
 
     for (let i = 0; i < reviews.length; i++) {
         let review = reviews[i];
-        let tarjeta = document.createElement("article");
-        tarjeta.className = "review";
-
-        let rating = document.createElement("p");
-        rating.className = "review-rating";
-        rating.textContent = review.rating + "/5";
-
-        let comentario = document.createElement("p");
-        comentario.textContent = review.comment;
-
-        let fecha = document.createElement("p");
-        fecha.className = "review-fecha";
-        fecha.textContent =
-            new Date(review.date).toLocaleDateString("es-AR");
-
-        let usuario = document.createElement("p");
-        usuario.className = "review-usuario";
-        usuario.textContent = review.reviewerName;
-
-        tarjeta.appendChild(rating);
-        tarjeta.appendChild(comentario);
-        tarjeta.appendChild(fecha);
-        tarjeta.appendChild(usuario);
-        listaReviews.appendChild(tarjeta);
+                listaReviews.innerHTML +=
+            "<article class='review'>" +
+            "<p class='review-rating'>" + review.rating + "/5</p>" +
+            "<p>" + review.comment + "</p>" +
+            "<p class='review-fecha'>" + review.date + "</p>" +
+            "<p class='review-usuario'>" + review.reviewerName + "</p>" +
+            "</article>";
     }
 }
