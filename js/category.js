@@ -1,3 +1,4 @@
+console.log("category.js está funcionando");
 let parametrosCategoria = new URLSearchParams(window.location.search);
 let categoria = parametrosCategoria.get("categoria");
 
@@ -6,6 +7,9 @@ let listaProductos = document.querySelector("#productos-categoria");
 
 if (categoria == null || categoria == "") {
     estadoCategoria.innerText = "No se seleccionó una categoría.";
+} else {
+    console.log("Categoría seleccionada: " + categoria);
+
     fetch("https://dummyjson.com/products/category/" + categoria)
         .then(function (respuesta) {
             if (!respuesta.ok) {
