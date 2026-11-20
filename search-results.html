@@ -21,11 +21,13 @@
         </div>
 
         <nav class="menuprincipal">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./register.html">Registro</a></li>
-            </ul>
+    <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li id="login-link"> <a href="./login.html">Login</a></li>
+         <li id="registro-link"><a href="./register.html">Registro</a></li>
+         <li id="saludo-usuario" hidden></li>
+         <li id="logout-contenedor" hidden><a id="logout-link" href="#">Logout</a></li>
+   </ul>
         </nav>
     </header>
 
@@ -62,54 +64,21 @@
         </nav>
 
         <main class="contenido-principal">
-            <p class="ruta">
-                <a href="./index.html">Inicio</a> / Búsqueda
-            </p>
+    <p class="ruta">
+        <a href="./index.html">Inicio</a> / Búsqueda
+    </p>
 
-            <h1>Resultados de búsqueda</h1>
+    <h1 id="titulo-busqueda"></h1>
 
-            <p class="termino-buscado">
-                Buscaste: <strong>"pelota"</strong> - 3 productos encontrados
-            </p>
+    <p id="mensaje-busqueda"></p>
 
-            <section class="seccion-productos">
-                <h2>Productos que coinciden con tu búsqueda</h2>
-
-                <div class="lista-productos">
-                    <article class="producto">
-                        <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
-                        <h3>Pelota de rugby Gilbert</h3>
-                        <p>Pelota de rugby Gilbert resistente y de excelente calidad.</p>
-                        <p><strong>Precio: $45.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/pelotamundial.png" alt="Pelota del Mundial de Rugby 2027">
-                        <h3>Pelota Mundial de Rugby 2027</h3>
-                        <p>Pelota Gilbert con el diseño oficial de Australia 2027.</p>
-                        <p><strong>Precio: $95.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/pelotarebound.png" alt="Pelota de entrenamiento Gilbert Rebounder">
-                        <h3>Pelota Gilbert Rebounder</h3>
-                        <p>Pelota con extremo plano para practicar pases contra una pared.</p>
-                        <p><strong>Precio: $75.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-                </div>
-            </section>
-
-            <section class="sin-resultados">
-                <h2>No encontraste lo que buscabas</h2>
-                <p>
-                    No hay productos que coincidan con el término buscado. Probá con otra palabra o recorré las categorías del menú.
-                </p>
-                <a href="./index.html">Volver al inicio</a>
-            </section>
-        </main>
+    <section class="seccion-productos">
+        <div
+            class="lista-productos"
+            id="resultados-busqueda"
+        ></div>
+    </section>
+</main>
     </div>
 
     <footer class="footer">
@@ -120,5 +89,6 @@
     <script src="./js/index.js"></script>
     <script src="./js/saludo.js"></script>
     <script src="./js/logout.js"></script>
+    <script src="./js/search-results.js"></script>
 </body>
 </html>

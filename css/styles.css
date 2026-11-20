@@ -413,4 +413,8 @@ body {
     .review {
         width: 100%;
     }
+
+.mensaje-error {
+    color: #c66a4a;
+}
 }
