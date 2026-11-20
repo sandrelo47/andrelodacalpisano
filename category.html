@@ -62,95 +62,23 @@
         </nav>
 
         <main class="contenido-principal">
-            <p class="ruta">
-                <a href="./index.html">Inicio</a> / Sports accessories
-            </p>
+     <p class="ruta">
+        <a href="./index.html">Inicio</a> /
+        <span id="ruta-categoria">Categoría</span>
+     </p>
 
-            <div class="encabezado-categoria">
-                <h1>Sports accessories</h1>
-                <p>
-                    Pelotas, protecciones y accesorios para entrenar y jugar al rugby. Todos los productos de esta categoría.
-                </p>
-            </div>
+     <div class="encabezado-categoria">
+        <h1 id="titulo-categoria">Productos por categoría</h1>
+        <p>Todos los productos disponibles en la categoría seleccionada.</p>
+     </div>
 
-            <section class="seccion-productos">
-                <h2>9 productos en Sports accessories</h2>
+     <section class="seccion-productos">
+        <h2 id="cantidad-productos">Productos</h2>
 
-                <div class="lista-productos">
-                    <article class="producto">
-                        <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
-                        <h3>Pelota de rugby Gilbert</h3>
-                        <p>Pelota de rugby Gilbert resistente y de excelente calidad.</p>
-                        <p><strong>Precio: $45.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/pelotamundial.png" alt="Pelota del Mundial de Rugby 2027">
-                        <h3>Pelota Mundial de Rugby 2027</h3>
-                        <p>Pelota Gilbert con el diseño oficial de Australia 2027.</p>
-                        <p><strong>Precio: $95.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/pelotarebound.png" alt="Pelota de entrenamiento Gilbert Rebounder">
-                        <h3>Pelota Gilbert Rebounder</h3>
-                        <p>Pelota con extremo plano para practicar pases contra una pared.</p>
-                        <p><strong>Precio: $75.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/escudo.png" alt="Escudo de tackle Gilbert">
-                        <h3>Escudo de tackle Gilbert</h3>
-                        <p>Escudo acolchado para practicar tackles de manera segura.</p>
-                        <p><strong>Precio: $180.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/tee-rugby.png" alt="Tee para rugby">
-                        <h3>Tee verde</h3>
-                        <p>Tee profesional para practicar patadas a los palos.</p>
-                        <p><strong>Precio: $25.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/protectorbucal.png" alt="Protector bucal de rugby">
-                        <h3>Protector bucal Gilbert</h3>
-                        <p>Protector bucal cómodo para reducir golpes durante el juego.</p>
-                        <p><strong>Precio: $18.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/casco-rugby.jpeg" alt="Casco de rugby">
-                        <h3>Casco de rugby Canterbury</h3>
-                        <p>Protección acolchada y liviana para entrenamientos y partidos.</p>
-                        <p><strong>Precio: $52.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/hombreras-rugby.png" alt="Hombreras de rugby">
-                        <h3>Hombreras de rugby</h3>
-                        <p>Protección liviana y acolchada para hombros y costillas.</p>
-                        <p><strong>Precio: $75.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-
-                    <article class="producto">
-                        <img src="./img/bolso-rugby.png" alt="Bolso deportivo de rugby">
-                        <h3>Bolso deportivo de rugby</h3>
-                        <p>Bolso amplio y resistente para transportar la indumentaria.</p>
-                        <p><strong>Precio: $120.000</strong></p>
-                        <a href="./product.html">Ver detalle</a>
-                    </article>
-                </div>
-            </section>
-        </main>
+        <p id="estado-categoria">Cargando productos...</p>
+        <div class="lista-productos" id="productos-categoria"></div>
+     </section>
+       </main>
     </div>
 
     <footer class="footer">
@@ -159,5 +87,6 @@
         </p>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/category.js"></script> 
 </body>
 </html>
