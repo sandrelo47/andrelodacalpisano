@@ -62,71 +62,46 @@
         </nav>
 
         <main class="contenido-principal">
-            <p class="ruta">
-                <a href="./index.html">Inicio</a> / <a href="./category.html">Sports accessories</a> / Pelota de rugby Gilbert
-            </p>
+     <p class="ruta">
+        <a href="./index.html">Inicio</a> /
+        <a id="enlace-categoria" href="./category.html">Categoría</a> /
+        <span id="ruta-producto">Producto</span>
+     </p>
 
-            <article class="detalle-producto">
-                <div class="detalle-imagen">
-                    <img src="./img/pelota-rugby.png" alt="Pelota de rugby Gilbert">
-                </div>
+     <p id="estado-producto">Cargando producto...</p>
 
-                <div class="detalle-datos">
-                    <p class="detalle-marca">Gilbert</p>
-                    <h1>Pelota de rugby Gilbert</h1>
-                    <p class="detalle-precio">$45.000</p>
+     <article class="detalle-producto" id="detalle-producto" style="display: none;">
+         <div class="detalle-imagen">
+            <img id="imagen-producto" src="" alt="">
+        </div>
 
-                    <p>
-                        Pelota de rugby Gilbert resistente y de excelente calidad, ideal para entrenamientos y partidos.
-                        Tiene un agarre confiable en distintas condiciones y es de tamaño oficial.
-                    </p>
+        <div class="detalle-datos">
+            <p class="detalle-marca" id="marca-producto"></p>
+            <h1 id="titulo-producto"></h1>
+            <p class="detalle-precio" id="precio-producto"></p>
+            <p id="descripcion-producto"></p>
 
-                    <dl class="ficha-producto">
-                        <dt>Marca</dt>
-                        <dd>Gilbert</dd>
+            <dl class="ficha-producto">
+                <dt>Marca</dt>
+                <dd id="ficha-marca"></dd>
 
-                        <dt>Categoría</dt>
-                        <dd><a href="./category.html">Sports accessories</a></dd>
+                <dt>Categoría</dt>
+                <dd><a id="categoria-producto" href="./category.html"></a></dd>
 
-                        <dt>Stock</dt>
-                        <dd>24 unidades disponibles</dd>
-                    </dl>
+                <dt>Stock</dt>
+                <dd id="stock-producto"></dd>
+            </dl>
 
-                    <ul class="tags">
-                        <li>pelota</li>
-                        <li>gilbert</li>
-                        <li>entrenamiento</li>
-                    </ul>
-                </div>
-            </article>
+            <ul class="tags" id="tags-producto"></ul>
+        </div>
+     </article>
 
-            <section class="reviews">
-                <h2>Opiniones de los usuarios</h2>
-
-                <div class="lista-reviews">
-                    <article class="review">
-                        <p class="review-rating">5/5</p>
-                        <p>Excelente pelota, se siente igual a las que usamos en el club. La compré para entrenar en casa y no pierde aire.</p>
-                        <p class="review-fecha">12/08/2026</p>
-                        <p class="review-usuario">Tomás Ferreyra</p>
-                    </article>
-
-                    <article class="review">
-                        <p class="review-rating">4/5</p>
-                        <p>Muy buen agarre incluso con lluvia. Le saco una estrella porque tardó unos días más de lo esperado en llegar.</p>
-                        <p class="review-fecha">03/09/2026</p>
-                        <p class="review-usuario">Lucía Benítez</p>
-                    </article>
-
-                    <article class="review">
-                        <p class="review-rating">5/5</p>
-                        <p>Se la regalé a mi hijo que arrancó en infantiles y le encantó. Relación precio y calidad muy buena.</p>
-                        <p class="review-fecha">18/09/2026</p>
-                        <p class="review-usuario">Martín Sosa</p>
-                    </article>
-                </div>
-            </section>
-        </main>
+     <section class="reviews" id="seccion-reviews" style="display: none;">
+        <h2>Opiniones de los usuarios</h2>
+        <p id="estado-reviews"></p>
+        <div class="lista-reviews" id="lista-reviews"></div>
+     </section>
+ </main>
     </div>
 
     <footer class="footer">
@@ -135,5 +110,6 @@
         </p>
     </footer>
     <script src="./js/index.js"></script>
+    <script src="./js/product.js"></script>
 </body>
 </html>
