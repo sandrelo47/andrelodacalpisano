@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles.css"
+    <title>Rugby Store | Login</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header class="header">
@@ -15,42 +15,50 @@
 
             <form class="buscador" action="./search-results.html" method="GET">
                 <label for="busqueda">Buscar productos:</label>
-                <input id="busqueda" type="text" name="busqueda" value="">
+                <input id="busqueda" type="text" name="busqueda">
                 <button type="submit">Buscar</button>
             </form>
         </div>
 
         <nav class="menuprincipal">
             <ul>
-                <li><a href="./index.html"> Home </a></li>
-                <li><a href="./login.html"> Login </a></li>
-                <li><a href="./register.html"> Registro </a></li>
+                <li><a href="./index.html">Home</a></li>
+                <li id="login-link"><a href="./login.html">Login</a></li>
+                <li id="registro-link"><a href="./register.html">Registro</a></li>
+                <li id="saludo-usuario" hidden></li>
+                <li id="logout-contenedor" hidden>
+                    <a id="logout-link" href="#">Logout</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <section class="formulario-pagina">
-        <form class="login-form" action="./index.html" method="get">
+        <form class="login-form" id="formulario-login" novalidate>
             <div class="campo">
-<label for="email"> Email </label>
-<input type="email" id="email" name="email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <p id="error-email" class="mensaje-error"></p>
             </div>
+
             <div class="campo">
-<label for="password"> Contraseña </label>
-<input type="password" id="password" name="password">
-            </div>    
-    <button type="submit"> Ingresar </button>
-    <a href="./register.html"> No tengo cuenta </a>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password">
+                <p id="error-password" class="mensaje-error"></p>
+            </div>
+
+            <button type="submit">Ingresar</button>
+            <a href="./register.html">No tengo cuenta</a>
         </form>
-       
     </section>
 
     <footer class="footer">
-
-        <p>
-            Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.
-        </p>el vikingo se la comess
+        <p>Integrantes: Santino Andrelo, Marcos Pisano y Joaquín Eduardo Dacal.</p>
     </footer>
+
     <script src="./js/index.js"></script>
+    <script src="./js/saludo.js"></script>
+    <script src="./js/logout.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 </html>
